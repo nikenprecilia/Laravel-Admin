@@ -45,35 +45,35 @@
                             <div class="dropdown-menu" aria-labelledby="message">
                                 <p class="red">You have 4 Mails</p>
                                 <a class="dropdown-item media bg-flat-color-1" href="#">
-                                <span class="photo media-left"><img alt="avatar" src="public/images/avatar/1.jpg"></span>
+                                <span class="photo media-left"><img alt="avatar" src="{{asset('public/images/avatar/1.jpg')}}"></span>
                                 <span class="message media-body">
-                                    <span class="name float-left">Jonathan Smith</span>
+                                    <span class="name float-left">Niken Precilia</span>
                                     <span class="time float-right">Just now</span>
-                                        <p>Hello, this is an example msg</p>
+                                        <p>Hello, i am niken</p>
                                 </span>
                             </a>
                                 <a class="dropdown-item media bg-flat-color-4" href="#">
-                                <span class="photo media-left"><img alt="avatar" src="public/images/avatar/2.jpg"></span>
+                                <span class="photo media-left"><img alt="avatar" src="{{asset('public/images/avatar/2.jpg')}}"></span>
                                 <span class="message media-body">
-                                    <span class="name float-left">Jack Sanders</span>
+                                    <span class="name float-left">Recilia</span>
                                     <span class="time float-right">5 minutes ago</span>
-                                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                        <p>Project Laravel Admin</p>
                                 </span>
                             </a>
                                 <a class="dropdown-item media bg-flat-color-5" href="#">
-                                <span class="photo media-left"><img alt="avatar" src="images/avatar/3.jpg"></span>
+                                <span class="photo media-left"><img alt="avatar" src="{{asset('public/images/avatar/3.jpg')}}"></span>
                                 <span class="message media-body">
-                                    <span class="name float-left">Cheryl Wheeler</span>
+                                    <span class="name float-left">Recil</span>
                                     <span class="time float-right">10 minutes ago</span>
-                                        <p>Hello, this is an example msg</p>
+                                        <p>Baca Sekarang chatnya</p>
                                 </span>
                             </a>
                                 <a class="dropdown-item media bg-flat-color-3" href="#">
-                                <span class="photo media-left"><img alt="avatar" src="images/avatar/4.jpg"></span>
+                                <span class="photo media-left"><img alt="avatar" src="{{asset('public/images/avatar/4.jpg')}}"></span>
                                 <span class="message media-body">
-                                    <span class="name float-left">Rachel Santos</span>
+                                    <span class="name float-left">Niken</span>
                                     <span class="time float-right">15 minutes ago</span>
-                                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                        <p>Teknik Informatika</p>
                                 </span>
                             </a>
                             </div>
@@ -84,7 +84,7 @@
                 <div class="col-sm-5">
                     <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="public/images/admin.jpg" alt="User Avatar">
+                            <img class="user-avatar rounded-circle" src="{{asset('public/images/admin.jpg')}}" alt="User Avatar">
                         </a>
 
                         <div class="user-menu dropdown-menu">
@@ -101,7 +101,7 @@
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
-                                    </form>
+                            </form>
                         </div>
                     </div>
 
