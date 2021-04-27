@@ -48,14 +48,22 @@
                                 <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Salary</th>
+                                            <th>#</th>
+                                            <th>Nama</th>
+                                            <th>Status</th>
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
+
+                                        @foreach($data as $i=>$row)
                                         <tr>
+                                            <td>{{++$i}}</td>
+                                            <td>{{$row->nama_kategori}}</td>
+                                            <td>{{$row->status_kategori}}</td>
+                                        </tr>
+                                        @endforeach
+                                        <!-- <tr>
                                             <td>Niken Precilia</td>
                                             <td>System Architect</td>
                                             <td>Bali</td>
@@ -65,7 +73,7 @@
                                             <td>Arista Alfiana Sari</td>
                                             <td>Accountant</td>
                                             <td>Banyuwangi</td>
-                                            <td>$170,750</td>
+                                            <td>$170,750</td> -->
                                         </tr>
                                     </tbody>
                                 </table>
