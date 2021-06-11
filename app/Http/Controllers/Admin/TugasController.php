@@ -17,7 +17,7 @@ class TugasController extends Controller
     public function index()
     {
         //
-        $pagename='Data Tugas';
+        $pagename='Data Karyawan';
         $data = Task::all();
         return view('admin.tugas.index', compact('data','pagename'));
     }
@@ -31,7 +31,7 @@ class TugasController extends Controller
     {
         //
         $data_kategori = kategori::all();
-        $pagename = 'Form Input Tugas';
+        $pagename = 'Form Input Karyawan';
         return view('admin.tugas.create', compact('pagename','data_kategori'));
     }
 
@@ -62,7 +62,7 @@ class TugasController extends Controller
         //dd($data_tugas);
 
         $data_tugas->save();
-        return redirect('admin/tugas')->with('sukses', 'tugas berhasil disimpan');
+        return redirect('admin/tugas')->with('sukses', 'data berhasil disimpan');
     }
 
     /**
@@ -86,7 +86,7 @@ class TugasController extends Controller
     {
         //
         $data_kategori=kategori::all();
-        $pagename='Update Tugas';
+        $pagename='Update Data Karyawan';
         $data=Task::find($id);
         return view('admin.tugas.edit', compact('data', 'pagename', 'data_kategori'));
     }
@@ -119,7 +119,7 @@ class TugasController extends Controller
         //dd($data_tugas);
 
         $tugas->save();
-        return redirect('admin/tugas')->with('sukses', 'tugas berhasil disimpan');
+        return redirect('admin/tugas')->with('sukses', 'Data berhasil diupdate');
     }
 
     /**
@@ -134,6 +134,6 @@ class TugasController extends Controller
         $tugas = Task::find($id);
 
         $tugas->delete();
-        return redirect('admin/tugas')->with('sukses', 'tugas berhasil dihapus');
+        return redirect('admin/tugas')->with('sukses', 'Data berhasil dihapus');
     }
 }
