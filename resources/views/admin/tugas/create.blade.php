@@ -63,12 +63,12 @@
                                                         <form action="{{route('tugas.store')}}" method="post" enctype="multipart/form-data" class="form-horizontal">
                                                            @csrf
                                                             <div class="row form-group">
-                                                                <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Karyawan</label></div>
+                                                                <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Tugas</label></div>
                                                                 <div class="col-12 col-md-9"><input type="text" id="text-input" name="txtnama_tugas" placeholder="Text" class="form-control"><small class="form-text text-muted">This is a help text</small></div>
                                                             </div>
                                                             
                                                                 <div class="row form-group">
-                                                                    <div class="col col-md-3"><label for="select" class=" form-control-label">Jabatan</label></div>
+                                                                    <div class="col col-md-3"><label for="select" class=" form-control-label">Kategori Tugas</label></div>
                                                                     <div class="col-12 col-md-9">
                                                                         <select name="optionid_kategori" id="select" class="form-control">
 
@@ -86,7 +86,7 @@
                                                                 </div>
 
                                                                 <div class="row form-group">
-                                                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Alamat</label></div>
+                                                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">Keterangan Tugas</label></div>
                                                                     <div class="col-12 col-md-9"><input type="text" id="text-input" name="txtketerangan_tugas" placeholder="Text" class="form-control"><small class="form-text text-muted">This is a help text</small></div>
                                                                 </div>
                                                               
@@ -95,10 +95,10 @@
                                                                     <div class="col col-md-9">
                                                                         <div class="form-check-inline form-check">
                                                                             <label for="inline-radio1" class="form-check-label ">
-                                                                                <input type="radio" id="inline-radio1" name="radiostatus_tugas" value="0" class="form-check-input">Sudah Kawin
+                                                                                <input type="radio" id="inline-radio1" name="radiostatus_tugas" value="0" class="form-check-input">Masih Berjalan
                                                                             </label>
                                                                             <label for="inline-radio2" class="form-check-label ">
-                                                                                <input type="radio" id="inline-radio2" name="radiostatus_tugas" value="1" class="form-check-input">Belum Kawin
+                                                                                <input type="radio" id="inline-radio2" name="radiostatus_tugas" value="1" class="form-check-input">Selesai
                                                                             </label>
                                                                             
                                                                         </div>
