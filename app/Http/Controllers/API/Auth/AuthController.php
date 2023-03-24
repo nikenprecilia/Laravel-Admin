@@ -13,6 +13,7 @@ class AuthController extends Controller
     public function register(Request $request){
         $validateDate = $request->validate([
             'name' => 'required|max:25',
+            'nim' => 'required|max:25',
             'email' => 'email | required | unique:users',
             'password' => 'required | confirmed',
         ]);
@@ -20,6 +21,7 @@ class AuthController extends Controller
         //create user
         $user = new User([
             'name' => $request->name,
+            'nim' => $request->nim,
             'email' => $request->email,
             'password' => bcrypt($request->password)
         ]);

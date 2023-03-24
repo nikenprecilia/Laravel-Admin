@@ -43,29 +43,65 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form>
+                    <form method="POST" action="{{ route('register') }}">
+                        @csrf
+
                         <div class="form-group">
                             <label>User Name</label>
-                            <input type="email" class="form-control" placeholder="User Name">
+                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                            @error('name')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
-                            <div class="form-group">
-                                <label>Email address</label>
-                                <input type="email" class="form-control" placeholder="Email">
+
+                        <div class="form-group">
+                            <label>NIM</label>
+                            <input id="nim" type="text" class="form-control @error('nim') is-invalid @enderror" name="nim" value="{{ old('nim') }}" required autocomplete="nim" autofocus>
+
+                            @error('nim')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
-                                <div class="form-group">
-                                    <label>Password</label>
-                                    <input type="password" class="form-control" placeholder="Password">
+
+                        <div class="form-group">
+                            <label>Email address</label>
+                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
-                                    <div class="checkbox">
-                                        <label>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label>Confirm Password</label>
+                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                        </div>
+                        <div class="checkbox">
+                            <label>
                                 <input type="checkbox"> Agree the terms and policy
                             </label>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Daftar</button>
-                                    
-                                    <div class="register-link m-t-15 text-center">
-                                        <p>Sudah Punya Akun? <a href="#"> Sign in</a></p>
-                                    </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
+
+                        <div class="register-link m-t-15 text-center">
+                            <p>Already have account ? <a href="{{ route('login') }}"> Sign in</a></p>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -77,7 +113,6 @@
     <script src="{{asset('public/vendors/popper.js/dist/umd/popper.min.js')}}"></script>
     <script src="{{asset('public/vendors/bootstrap/dist/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('public/assets/js/main.js')}}"></script>
-
 
 </body>
 
